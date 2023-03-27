@@ -1,6 +1,6 @@
 const { Schema, Types } = require('mongoose');
+const { formatDate } = require('../utils/helpers');
 
-// Schema to create a course model
 const reactionSchema = new Schema(
   {
     reactionID: {
@@ -10,7 +10,7 @@ const reactionSchema = new Schema(
     reactionBody: {
       type: String,
       required: true,
-      maxlength: 50,
+      maxlength: 500,
     },
     username: {
       type: String,
@@ -20,6 +20,9 @@ const reactionSchema = new Schema(
     createdAt: {
       type: Date,
       default: Date.now,
+      get: (date) => {
+        return formatDate(date)
+      },
     },
   },
   {
