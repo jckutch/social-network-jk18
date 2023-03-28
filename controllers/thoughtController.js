@@ -3,10 +3,11 @@ const { Thought, User } = require('../models');
 const thoughtController = {
   // Get all thoughts
   getThoughts(req, res) {
-    Thought.find()
+   Thought.find()
       .then((thoughts) => res.status(200).json(thoughts))
       .catch((err) => res.status(500).json(err));
   },
+
   getSingleThought(req, res) {
     Thought.findOne({ _id: req.params.thoughtId })
       .select('-__v')
@@ -17,6 +18,7 @@ const thoughtController = {
       )
       .catch((err) => res.status(500).json(err));
   },
+
   createThought(req, res) {
     Thought.create(req.body)
       .then((thought) => {

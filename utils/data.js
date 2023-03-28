@@ -1,35 +1,46 @@
 const users = [
   { 
-    username: 'tester',
-    email: 'email@test.com',
-    thoughts: [
-      {
-      thoughtText: 'This is a test',
-      username: 'test'
+    "username": "test",
+    "email": "email@test.com",
+    "thoughts": [],
+    "friends": [],
+    "__v": 0
       },
-    ],
-  },
   {
-  username: 'Jim Smith',
-  email: 'jim@smith.com',
-  thoughts: [
-    {
-      thoughtText: 'This is a Jim',
-      username: 'Jim Smith'
+    "username": "Jim Smith",
+    "email": "Jim@Smith.com",
+    "thoughts": [],
+    "friends": [],
+    "__v": 0
     },
-  ],
-
-  },
 ];
 
 const thoughts = [
   { 
-  thoughtText: 'This is a test',
-  username: 'test'
+    "createdAt": "",
+    "reactions": [
+      {
+        "reactionBody": "",
+        "username": "",
+        "reactionId": "",
+        "createdAt": "",
+      }
+    ],
+    "__v": 0
   },
   {
-  thoughtText: 'This is a Jim',
-  username: 'Jim Smith'
+    "thoughtText": "",
+    "username": "",
+    "createdAt": "",
+    "reactions": [
+      {
+        "reactionBody": "",
+        "username": "tester",
+        "reactionId": "",
+        "createdAt": "",
+      }
+    ],
+    "__v": 0
   },
 ];
 
