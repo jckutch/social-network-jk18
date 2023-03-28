@@ -1,13 +1,13 @@
 const router = require('express').Router();
 const {
-  getStudents,
-  getSingleStudent,
-  createStudent,
-  deleteStudent,
-  addAssignment,
-  removeAssignment,
-  
-} = require('../../controllers/studentController');
+  getUsers,
+  getSingleUser,
+  createUser,
+  updateUser,
+  deleteUser,
+  addFriend,
+  removeFriend,
+} = require('../../controllers/userController');
 
 router.route('/')
   .get(getUsers)

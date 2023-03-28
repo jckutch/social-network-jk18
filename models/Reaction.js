@@ -3,19 +3,18 @@ const { formatDate } = require('../utils/helpers');
 
 const reactionSchema = new Schema(
   {
-    reactionID: {
+    reactionId: {
       type: Schema.Types.ObjectId,
       default: () => new Types.ObjectId(),
     },
     reactionBody: {
       type: String,
       required: true,
-      maxlength: 500,
+      maxlength: 300,
     },
     username: {
       type: String,
       required: true,
-      max_length: 50,
     },
     createdAt: {
       type: Date,
