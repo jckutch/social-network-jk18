@@ -2,7 +2,7 @@
   "name": "social-network-jk18",
   "version": "1.0.0",
   "description": "NoSQL: Social Network API",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,13 +12,14 @@
   },
   "keywords": [],
   "author": "John Kutch",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/jckutch/social-network-jk18/issues"
   },
   "homepage": "https://github.com/jckutch/social-network-jk18#readme",
   "dependencies": {
     "express": "^4.18.2",
-    "mongoose": "^6.9.2"
+    "mongoose": "^6.9.2",
+    "nodemon": "^2.0.22"
   }
 }
