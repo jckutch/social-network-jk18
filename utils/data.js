@@ -16,32 +16,34 @@ const users = [
 ];
 
 const thoughts = [
-  { 
-    "createdAt": "",
+  {
+    "thoughtText": "This is a fun thought by Jim",
+    "username": "Jim Smith",
+    "createdAt": "2023-03-20T09:09:17.076+00:00",
     "reactions": [
       {
-        "reactionBody": "",
-        "username": "",
-        "reactionId": "",
-        "createdAt": "",
+        "reactionBody": "This is a serious reaction by test",
+        "username": "test",
+        "reactionId": "638083c9417ed0ed80903d82",
+        "createdAt": "2023-03-20T09:09:17.076+00:00",
       }
     ],
     "__v": 0
   },
   {
-    "thoughtText": "",
-    "username": "",
-    "createdAt": "",
+    "thoughtText": "This is a challenging thought by test",
+    "username": "test",
+    "createdAt": "2023-03-20T09:09:17.076+00:00",
     "reactions": [
       {
-        "reactionBody": "",
-        "username": "tester",
-        "reactionId": "",
-        "createdAt": "",
+        "reactionBody": "This is a clever reaction by Jim",
+        "username": "Jim Smith",
+        "reactionId": "6380840e417ed0ed80903d8a",
+        "createdAt": "2023-03-20T09:09:17.076+00:00",
       }
     ],
     "__v": 0
-  },
+  }
 ];
 
 module.exports = { users, thoughts };
