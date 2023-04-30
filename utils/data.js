@@ -5,14 +5,14 @@ const users = [
     "thoughts": [],
     "friends": [],
     "__v": 0
-      },
+  },
   {
     "username": "Jim Smith",
     "email": "Jim@Smith.com",
     "thoughts": [],
     "friends": [],
     "__v": 0
-    },
+  }
 ];
 
 const thoughts = [
@@ -25,7 +25,7 @@ const thoughts = [
         "reactionBody": "This is a serious reaction by test",
         "username": "test",
         "reactionId": "638083c9417ed0ed80903d82",
-        "createdAt": "2023-03-20T09:09:17.076+00:00",
+        "createdAt": "2022-11-25T09:09:17.076+00:00",
       }
     ],
     "__v": 0
@@ -39,11 +39,12 @@ const thoughts = [
         "reactionBody": "This is a clever reaction by Jim",
         "username": "Jim Smith",
         "reactionId": "6380840e417ed0ed80903d8a",
-        "createdAt": "2023-03-20T09:09:17.076+00:00",
+        "createdAt": "2022-11-25T09:09:17.076+00:00",
       }
     ],
     "__v": 0
   }
 ];
 
+// Export the functions for use in seed.js
 module.exports = { users, thoughts };

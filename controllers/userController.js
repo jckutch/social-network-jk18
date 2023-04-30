@@ -3,6 +3,7 @@ const { User, Thought } = require('../models');
 const userController = {
   // Get all users
   getUsers(req, res) {
+    // find() on User
     User.find()
       .then((users) => res.status(200).json(users))
       .catch((err) => res.status(500).json(err));
@@ -10,6 +11,9 @@ const userController = {
 
   // Get a single user
   getSingleUser(req, res) {
+    // findOne() on User
+    // use .populate to populate friends and thoughts for that User
+    // ex: .populate('friends')
     User.findOne({ _id: req.params.userId })
       .select('-__v')
       .populate('friends')
@@ -24,6 +28,7 @@ const userController = {
 
   // create a new user
   createUser(req, res) {
+    // create on User
     User.create(req.body)
       .then((user) => res.status(200).json(user))
       .catch((err) => {
@@ -34,6 +39,7 @@ const userController = {
 
   // update a user
   updateUser(req, res) {
+    // findOneAndUpdate
     User.findOneAndUpdate(
       { _id: req.params.userId },
       { $set: req.body },
@@ -49,6 +55,7 @@ const userController = {
 
   // Delete a user and associated thoughts
   deleteUser(req, res) {
+    // findOneAndDelete
     User.findOneAndDelete({ _id: req.params.userId })
       .then((user) =>
         !user
@@ -61,6 +68,7 @@ const userController = {
 
   // Add friend to friend list
   addFriend(req, res) {
+    // findOneAndUpdate
     User.findOneAndUpdate(
       { _id: req.params.userId },
       { $addToSet: { friends: req.body } },
@@ -76,6 +84,7 @@ const userController = {
 
   // Remove friend from friend list
   removeFriend(req, res) {
+    // findOneAndUpdate
     User.findOneAndUpdate(
       { _id: req.params.userId },
       { $pull: { friends: req.params.friendId } },

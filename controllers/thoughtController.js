@@ -3,6 +3,7 @@ const { Thought, User } = require('../models');
 const thoughtController = {
   // Get all thoughts
   getThoughts(req, res) {
+    // find() on Thought
     Thought.find()
       .then((thoughts) => res.status(200).json(thoughts))
       .catch((err) => res.status(500).json(err));
@@ -10,6 +11,7 @@ const thoughtController = {
 
   // Get a single thought
   getSingleThought(req, res) {
+    // findOne() on Thought
     Thought.findOne({ _id: req.params.thoughtId })
       .select('-__v')
       .then((thought) =>
@@ -22,6 +24,7 @@ const thoughtController = {
 
   // create a new thought
   createThought(req, res) {
+    // create on Thought
     Thought.create(req.body)
       .then((thought) => {
         return User.findOneAndUpdate(
@@ -44,6 +47,7 @@ const thoughtController = {
 
   // update a thought
   updateThought(req, res) {
+    // findOneAndUpdate
     Thought.findOneAndUpdate(
       { _id: req.params.thoughtId },
       { $set: req.body },
@@ -61,6 +65,7 @@ const thoughtController = {
 
   // delete a thought
   deleteThought(req, res) {
+    // findOneAndDelete
     Thought.findOneAndRemove({ _id: req.params.thoughtId })
       .then((thought) =>
         !thought
@@ -83,6 +88,7 @@ const thoughtController = {
 
   // add a reaction to a thought
   addReaction(req, res) {
+    // findOneAndUpdate
     Thought.findOneAndUpdate(
       { _id: req.params.thoughtId },
       { $addToSet: { reactions: req.body } },
@@ -98,6 +104,7 @@ const thoughtController = {
 
   // Remove reaction from a thought
   removeReaction(req, res) {
+    // findOneAndUpdate
     Thought.findOneAndUpdate(
       { _id: req.params.thoughtId },
       { $pull: { reactions: { reactionId: req.params.reactionId } } },

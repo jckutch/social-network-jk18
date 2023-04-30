@@ -59,7 +59,7 @@ https://github.com/jckutch/social-network-jk18<br />
 Video Link:  
 https://<br />
 <br />
-<br />
+
 ## License 
   <a name="license"></a> License
 Licensed under <br /> 
