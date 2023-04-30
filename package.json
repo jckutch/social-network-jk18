@@ -4,13 +4,13 @@
   "description": "NoSQL: Social Network API",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "seed": "node utils/seed"
+    "seed": "node utils/seed",
+    "heroku-postbuild": "node utils/seed.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jckutch/social-network-jk18.git"
+    "url": "git+https://github.com/Mateo-Wallace/M18-Social-Network-API.git"
   },
   "keywords": [],
   "author": "John Kutch",
@@ -20,9 +20,7 @@
   },
   "homepage": "https://github.com/jckutch/social-network-jk18#readme",
   "dependencies": {
-    "express": "^4.18.2",
-    "mongoose": "^6.9.2",
-    "nodemon": "^2.0.22"
-  },
-  "devDependencies": {}
+    "express": "^4.17.1",
+    "mongoose": "^6.9.2"
+  }
 }
