@@ -80,7 +80,7 @@ const thoughtController = {
         !user
           ? res
             .status(404)
-            .json({ message: 'Video deleted but no user with this id!' })
+            .json({ message: 'Thought deleted but no user with this id!' })
           : res.status(200).json({ message: 'Thought successfully deleted!' })
       )
       .catch((err) => res.status(500).json(err));

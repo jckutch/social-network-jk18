@@ -57,7 +57,7 @@ https://github.com/jckutch/social-network-jk18<br />
 <br />
 
 Video Link:  
-https://<br />
+https://drive.google.com/file/d/1SDOa1EQY06w_DKVUyNkGdfIe2RNC6POh/view<br />
 <br />
 
 ## License 
